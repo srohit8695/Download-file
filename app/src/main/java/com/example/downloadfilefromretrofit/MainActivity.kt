@@ -39,6 +39,10 @@ class MainActivity : AppCompatActivity() {
             downloader?.resumeDownload()
         }
 
+        binding.stopDownload.setOnClickListener{
+            downloader?.cancelDownload()
+        }
+
         binding.startDownload.setOnClickListener {
 //            DownloadUrlFile.downloadFileFromUrl("https://speed.hetzner.de/100MB.bin")
 
