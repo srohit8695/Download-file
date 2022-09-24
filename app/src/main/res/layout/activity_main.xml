@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+
+    <Button
+        android:id="@+id/startDownload"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="start download"
+        tools:layout_editor_absoluteX="110dp"
+        tools:layout_editor_absoluteY="66dp" />
+
+    <Button
+        android:id="@+id/pauseDownload"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/startDownload"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pause download"
+        tools:layout_editor_absoluteX="110dp"
+        tools:layout_editor_absoluteY="66dp" />
+
+    <Button
+        android:id="@+id/resumeDownload"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pauseDownload"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Resume download"
+        tools:layout_editor_absoluteX="110dp"
+        tools:layout_editor_absoluteY="66dp" />
+
+    <Button
+        android:id="@+id/stopDownload"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/resumeDownload"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Stop download"
+        tools:layout_editor_absoluteX="110dp"
+        tools:layout_editor_absoluteY="66dp" />
+
+    <ProgressBar
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/stopDownload"
+        android:id="@+id/download_progress"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:indeterminateOnly="false"/>
+
+    <TextView
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/download_progress"
+        android:id="@+id/percent_txt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/percent_txt"
+        android:id="@+id/size_txt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/size_txt"
+        android:id="@+id/total_size_txt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
